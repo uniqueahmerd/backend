@@ -39,6 +39,7 @@ app.use(
     credentials: true,
   })
 );
+app.options("*", cors());
 app.use(cookieParser());
 
 //API Endpoints
@@ -48,6 +49,17 @@ app.use("/api/products", productRouter);
 app.use("/api/wallet", walletRouter);
 app.use("/api/transactions", transactionRouter);
 app.use("/api/purchasedProduct", purchasedRouter);
+
+app.use((req, res, next) => {
+  res.header("Access-Control-Allow-Origin", [
+    "https://frontend-v115.vercel.app",
+    "https://admin-nine-phi.vercel.app",
+    "http://localhost:5173",
+    "http://localhost:5174",
+  ]);
+  res.header("Access-Control-Allow-Credentials", "true");
+  res.status(404).json({ success: false, message: "Not Found" });
+});
 
 // Socket.IO configuration
 const server = http.createServer(app);
