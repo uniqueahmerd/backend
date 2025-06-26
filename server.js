@@ -30,7 +30,12 @@ const PORT = process.env.PORT || 5000;
 app.use(express.json());
 app.use(
   cors({
-    origin: true, // or use "*" if you do NOT need credentials/cookies
+    origin: [
+      "https://frontend-v115.vercel.app/",
+      "https://admin-nine-phi.vercel.app/",
+      "http://localhost:5173",
+      "http://localhost:5174",
+    ],
     credentials: true,
   })
 );
