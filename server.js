@@ -31,8 +31,8 @@ app.use(express.json());
 app.use(
   cors({
     origin: [
-      "https://frontend-v115.vercel.app/",
-      "https://admin-nine-phi.vercel.app/",
+      "https://frontend-v115.vercel.app",
+      "https://admin-nine-phi.vercel.app",
       "http://localhost:5173",
       "http://localhost:5174",
     ],
@@ -53,7 +53,12 @@ app.use("/api/purchasedProduct", purchasedRouter);
 const server = http.createServer(app);
 const io = new Server(server, {
   cors: {
-    origin: "*", // Allow all origins
+    origin: [
+      "https://frontend-v115.vercel.app",
+      "https://admin-nine-phi.vercel.app",
+      "http://localhost:5173",
+      "http://localhost:5174",
+    ],
     methods: ["GET", "POST"],
     credentials: true,
   },
