@@ -32,7 +32,7 @@ app.use(
   cors({
     origin: [
       "https://frontend-v115.vercel.app",
-      "https://admin-5iajxk1ll-unique-ahmerdys-projects.vercel.app",
+      "https://admin-ten-wheat-77.vercel.app",
       "http://localhost:5173",
       "http://localhost:5174",
     ],
