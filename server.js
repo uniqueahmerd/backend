@@ -50,8 +50,7 @@ app.use("/api/wallet", walletRouter);
 app.use("/api/transactions", transactionRouter);
 app.use("/api/purchasedProduct", purchasedRouter);
 
-app.use((req, res, next) => {
-  // Set CORS header to allow the request's origin if it's in your whitelist
+app.use((req, res) => {
   const allowedOrigins = [
     "https://frontend-v115.vercel.app",
     "https://admin-nine-phi.vercel.app",
