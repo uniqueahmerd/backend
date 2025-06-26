@@ -53,7 +53,7 @@ app.use("/api/purchasedProduct", purchasedRouter);
 app.use((req, res) => {
   const allowedOrigins = [
     "https://frontend-v115.vercel.app",
-    "https://admin-nine-phi.vercel.app",
+    "https://admin-ten-wheat-77.vercel.app",
     "http://localhost:5173",
     "http://localhost:5174",
   ];
@@ -71,7 +71,7 @@ const io = new Server(server, {
   cors: {
     origin: [
       "https://frontend-v115.vercel.app",
-      "https://admin-5iajxk1ll-unique-ahmerdys-projects.vercel.app",
+      "https://admin-ten-wheat-77.vercel.app",
       "http://localhost:5173",
       "http://localhost:5174",
     ],
